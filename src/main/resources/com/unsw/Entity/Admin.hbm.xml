@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.unsw.Entity.Admin" table="admin" schema="unswbook">
+        <id name="adminUid">
+            <column name="admin_uid" sql-type="int(12)"/>
+        </id>
+        <property name="uid">
+            <column name="uid" sql-type="int(12)"/>
+        </property>
+    </class>
+</hibernate-mapping>

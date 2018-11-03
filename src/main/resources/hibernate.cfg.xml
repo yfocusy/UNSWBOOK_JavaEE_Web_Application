@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/unswbook</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <mapping class="com.unsw.Entity.Users"/>
+
+        <mapping resource="com/unsw/Entity/Users.hbm.xml"/>
+        <mapping class="com.unsw.Entity.Admin"/>
+        <mapping resource="com/unsw/Entity/Admin.hbm.xml"/>
+        <mapping class="com.unsw.Entity.Album"/>
+        <mapping resource="com/unsw/Entity/Album.hbm.xml"/>
+        <mapping class="com.unsw.Entity.Friend"/>
+        <mapping resource="com/unsw/Entity/Friend.hbm.xml"/>
+        <mapping class="com.unsw.Entity.FriendApply"/>
+        <mapping resource="com/unsw/Entity/FriendApply.hbm.xml"/>
+        <mapping class="com.unsw.Entity.Photo"/>
+        <mapping resource="com/unsw/Entity/Photo.hbm.xml"/>
+        <mapping class="com.unsw.Entity.Post"/>
+        <mapping resource="com/unsw/Entity/Post.hbm.xml"/>
+        <mapping class="com.unsw.Entity.PostComment"/>
+        <mapping resource="com/unsw/Entity/PostComment.hbm.xml"/>
+        <!--<mapping class="com.com.unsw.Entity.PostLikeorUnLike"/>-->
+        <!--<mapping resource="com/com.unsw/Entity/PostLikeorUnLike.hbm.xml"/>-->
+        <mapping resource="com/unsw/Entity/PostLikeOrUnlike.hbm.xml"/>
+        <mapping class="com.unsw.Entity.PostLikeOrUnlike"/>
+         <!--<property name="connection.username"/> -->
+         <!--<property name="connection.password"/> -->
+        <mapping resource="com/unsw/Entity/UsersBuffer.hbm.xml"/>
+        <mapping class="com.unsw.Entity.UsersBuffer"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

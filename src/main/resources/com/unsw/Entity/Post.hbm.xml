@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.unsw.Entity.Post" table="post" schema="unswbook">
+        <id name="postId">
+            <column name="post_id" sql-type="int(11)"/>
+        </id>
+        <property name="uid">
+            <column name="poster_uid" sql-type="int(12)"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="varchar(256)" length="256" not-null="true"/>
+        </property>
+        <property name="postime">
+            <column name="postime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="imageNum">
+            <column name="image_num" sql-type="varchar(256)" />
+        </property>
+        <property name="commentNum">
+            <column name="comment_num" sql-type="int(11)"/>
+        </property>
+        <property name="likeNum">
+            <column name="like_num" sql-type="int(11)"/>
+        </property>
+        <property name="unlikeNum">
+            <column name="unlike_num" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.unsw.Entity.Friend" table="friend" schema="unswbook">
+        <id name="friendshipId">
+            <column name="friendship_id" sql-type="int(11)"/>
+        </id>
+        <property name="user1Uid">
+            <column name="user1_uid" sql-type="int(11)"></column>
+        </property>
+        <property name="user2Uid">
+            <column name="user2_uid" sql-type="int(11)"></column>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

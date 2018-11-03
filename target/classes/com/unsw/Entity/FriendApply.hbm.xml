@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.unsw.Entity.FriendApply" table="friendapply" schema="unswbook">
+        <id name="friendApplyId">
+            <column name="friendApply_id" sql-type="int(11)"/>
+        </id>
+        <property name="senderUid">
+            <column name="sender_uid" sql-type="int(11)"></column>
+        </property>
+        <property name="receiverUid">
+            <column name="receiver_uid" sql-type="int(11)"></column>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

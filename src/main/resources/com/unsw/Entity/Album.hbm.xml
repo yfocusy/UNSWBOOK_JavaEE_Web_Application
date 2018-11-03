@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.unsw.Entity.Album" table="album" schema="unswbook">
+        <id name="albumId">
+            <column name="album_id" sql-type="int(11)"/>
+        </id>
+        <property name="type">
+            <column name="type" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+
+        <property name="uid">
+            <column name="uid" sql-type="int(12)"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
